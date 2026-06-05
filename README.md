@@ -1,6 +1,6 @@
 # Mahmoud Ben Abdelkader
 
-I build AI systems end to end: training and fine-tuning models, the RAG pipelines around them, and the backend that serves them, with a bias toward local, cloud-free inference. Software engineering student at [ISIMM Monastir](https://www.isimm.rnu.tn/), graduating 2027.
+I build AI systems : training and fine-tuning models, the RAG pipelines around them, and the backend that serves them, with a bias toward local, cloud-free inference. Software engineering student at [ISIMM Monastir](https://www.isimm.rnu.tn/), graduating 2027.
 
 ## What I'm doing at Yonnov'IA
 
