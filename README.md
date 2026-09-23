@@ -73,6 +73,7 @@ A modular Obsidian knowledge base (MuLearning) spanning programming, backend, AI
 
 **Frontend**
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)
 
 ---
 
