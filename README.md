@@ -6,7 +6,22 @@ I build AI systems: training and fine-tuning models, the RAG pipelines around th
 
 ## What I'm doing at Yonnov'IA
 
-AI Engineer (part-time, remote), after a full-time internship in Summer 2025. I work on the AI backend for an LLM platform: retrieval and RAG, NLP pipelines, fine-tuning, and local serving, focused on reliability and efficiency under production constraints.
+AI Engineer (part-time, remote) since September 2025. Local LLM serving and retrieval: hybrid dense + BM25 search across Qdrant and Weaviate, output schema-validated. NLP pipelines and ML experimentation, as asynchronous services on distributed task queues. Self-hosted, no cloud dependency, tuned to local VRAM/CPU limits.
+
+Before that, a full-time internship (Summer 2025): a fully local assistant built on a fine-tuned Qwen 2.5 7B.
+
+---
+
+## Projects
+
+- **[Yaqadha](https://github.com/Mahmoud-ABK/yaqadha)**: patients report drug side effects to an LLM forbidden from giving advice, a pharmacist validates every case by phone.
+  - An LLM abstraction layer whose two operations return only a next question or structured fields, never advice.
+  - Pharmacist NL queries become SQL, validated single-statement and SELECT-only before running on a read-only connection.
+  - A DRAFT to QUEUED to IN\_CALL to VALIDATED state machine; signing freezes an immutable snapshot. Frontend types come from the backend's OpenAPI schema.
+- **[Guide Dog Classifier](https://github.com/Mahmoud-ABK/finetune-efficientnetb3-low-vram)**: EfficientNet-B3 fine-tuned on Stanford Dogs inside a 4 GB RTX 3050 Ti, mixed precision with gradient accumulation replacing a run that runs out of memory without it.
+- **[AutoReview-NLP-Arabic](https://github.com/Mahmoud-ABK/AutoReview-NLP-Arabic)**: reviewer assignment over 1,600+ Arabic papers via OCR, an Author-Article graph, and TF-IDF/cosine expertise matching.
+- **[Sentinelle](https://github.com/Mahmoud-ABK/fire-monitoring-pipeline-sentinelle)**: NASA FIRMS fire detections clustered on a 0.1° grid, population exposure counted over 168,005 GeoNames cities within 50 km via PostgreSQL earthdistance.
+- **[University Scheduling API](https://github.com/Mahmoud-ABK/UniversityScheduling_backend)**: Spring Boot API for four roles, with conflict detection, a makeup-session approval flow, and Excel import.
 
 ---
 
@@ -20,15 +35,6 @@ A modular Obsidian knowledge base (MuLearning) spanning programming, backend, AI
 
 ---
 
-## Projects
-
-- [Sentinelle](https://github.com/Mahmoud-ABK/fire-monitoring-pipeline-sentinelle) — Real-time wildfire monitoring pipeline: ingests NASA FIRMS satellite fire detections, clusters them into incidents, enriches with weather data, and visualizes exposure on a Streamlit dashboard. Kafka, Airflow, PostgreSQL, Docker Compose.
-- [AutoReview-NLP-Arabic](https://github.com/Mahmoud-ABK/AutoReview-NLP-Arabic) — Graph-based automated reviewer assignment for Arabic scientific journals: OCR + text normalization over 1,600+ papers, author disambiguation via an Author-Article graph, TF-IDF/cosine expertise matching.
-- [Guide Dog Classifier](https://github.com/Mahmoud-ABK/finetune-efficientnetb3-low-vram) — Fine-tuned EfficientNet-B3 on the Stanford Dogs dataset on a 4GB GPU, using gradient accumulation and mixed precision.
-- [University Scheduling API](https://github.com/Mahmoud-ABK/UniversityScheduling_backend) — Spring Boot REST API for university scheduling with JWT auth, role-based access, conflict detection, and Excel import.
-
----
-
 ## Stack
 
 **Languages**
@@ -38,14 +44,13 @@ A modular Obsidian knowledge base (MuLearning) spanning programming, backend, AI
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
 ![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
 **AI/ML**
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-555555?style=flat-square)
-![Fine--tuning](https://img.shields.io/badge/LLM%20Fine--tuning-555555?style=flat-square)
-![Transfer Learning](https://img.shields.io/badge/Transfer%20Learning-555555?style=flat-square)
+![XGBoost](https://img.shields.io/badge/XGBoost-555555?style=flat-square)
 
 **Backend**
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
@@ -54,6 +59,8 @@ A modular Obsidian knowledge base (MuLearning) spanning programming, backend, AI
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
 
 **Data / Systems**
 ![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
@@ -61,6 +68,11 @@ A modular Obsidian knowledge base (MuLearning) spanning programming, backend, AI
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white)
 ![llama.cpp](https://img.shields.io/badge/llama.cpp-555555?style=flat-square)
+![Qdrant](https://img.shields.io/badge/Qdrant-555555?style=flat-square)
+![Weaviate](https://img.shields.io/badge/Weaviate-555555?style=flat-square)
+
+**Frontend**
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 
 ---
 
@@ -72,13 +84,11 @@ NVIDIA Deep Learning Institute: [Diffusion Models](https://learn.nvidia.com/cert
 
 ## Languages
 
-Arabic (native) · French (fluent) · English ([C1, onSET](https://www.onset.de/home/check/?name=Mahmoud%20Ben%20Abdelkader&birthday=12.11.2003&examDate=17.04.2026&examLanguage=Englisch&totalScore=139&grade=C1%20%28oder%20h%C3%B6her%29&certificateCode=C1208830b1257220363)) · German (beginner)
+Arabic (native) · French (fluent) · English (C1, onSET) · German (beginner)
 
 ---
 
 ## Reach me
-
-Open to collaborations and interesting work.
 
 - **Email:** benabdelkadermahmoud2003@gmail.com
 - **LinkedIn:** [mahmoud-ben-abdelkader](https://www.linkedin.com/in/mahmoud-ben-abdelkader/)
